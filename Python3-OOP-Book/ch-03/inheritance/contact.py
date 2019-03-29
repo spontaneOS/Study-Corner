@@ -30,6 +30,13 @@ class Supplier(Contact):
     def order(self, order):
         print("Test of sending order '{}' to '{}'.".format(order, self.name))
 
+class MailSender:
+    def send_mail(self, message):
+        print("Sending mail to " + self.email)
+
+class EmailableContact(Contact, MailSender):
+    pass
+
 c = Contact("Someone", "someone@a.com")
 s = Supplier("Merchant", "merchant@b.com")
 
@@ -44,3 +51,7 @@ c3 = Contact("User C", "c@xyz.com")
 
 l = [c.name for c in Contact.all_contacts.search("User")]
 print(l)
+
+e = EmailableContact("John", "j@xyz.com")
+print(Contact.all_contacts)
+e.send_mail("Hi")
