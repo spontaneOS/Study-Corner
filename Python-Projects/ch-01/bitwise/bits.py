@@ -54,3 +54,6 @@ def listbits(val):
     for n in range(num):
         result.append( 1 if bit(val,n) else 0)
     return list(reversed(result))
+
+if __name__ == "__main__":
+    print(listbits(0b10111))
