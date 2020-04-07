@@ -1,7 +1,7 @@
 ﻿-f T:/tetra/main/python/.offline
 attrs==19.1.0
 backcall==0.1.0
-bleach==3.1.2
+bleach==3.1.4
 bqplot==0.11.7
 certifi==2019.6.16
 chardet==3.0.4
